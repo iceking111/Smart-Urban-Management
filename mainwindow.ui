@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>字符串与数值处理工具</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_main">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_string">
+       <attribute name="title">
+        <string>字符串处理</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_string">
+        <item>
+         <widget class="QGroupBox" name="groupBox_string_input">
+          <property name="title">
+           <string>字符串输入</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_string_input">
+           <item>
+            <widget class="QLineEdit" name="lineEdit_string_input">
+             <property name="placeholderText">
+              <string>请输入要处理的字符串...</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextEdit" name="textEdit_string_input">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>100</height>
+              </size>
+             </property>
+             <property name="placeholderText">
+              <string>多行文本输入...</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_string_operations">
+          <property name="title">
+           <string>字符串操作</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_string_ops">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButton_reverse">
+             <property name="text">
+              <string>反转</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="pushButton_upper">
+             <property name="text">
+              <string>转大写</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="pushButton_lower">
+             <property name="text">
+              <string>转小写</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QPushButton" name="pushButton_trim">
+             <property name="text">
+              <string>去除空格</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="pushButton_count_chars">
+             <property name="text">
+              <string>字符数统计</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="pushButton_count_words">
+             <property name="text">
+              <string>单词数统计</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="pushButton_unicode_info">
+             <property name="text">
+              <string>Unicode信息</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QPushButton" name="pushButton_encoding">
+             <property name="text">
+              <string>编码转换</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_string_result">
+          <property name="title">
+           <string>处理结果</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_string_result">
+           <item>
+            <widget class="QTextEdit" name="textEdit_string_result">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_numeric">
+       <attribute name="title">
+        <string>数值处理</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_numeric">
+        <item>
+         <widget class="QGroupBox" name="groupBox_numeric_input">
+          <property name="title">
+           <string>数值输入</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_numeric_input">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_int_input">
+             <property name="text">
+              <string>整数输入:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSpinBox" name="spinBox_int_input">
+             <property name="minimum">
+              <number>-999999999</number>
+             </property>
+             <property name="maximum">
+              <number>999999999</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_double_input">
+             <property name="text">
+              <string>浮点数输入:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QDoubleSpinBox" name="doubleSpinBox_input">
+             <property name="decimals">
+              <number>6</number>
+             </property>
+             <property name="minimum">
+              <double>-999999999.000000</double>
+             </property>
+             <property name="maximum">
+              <double>999999999.000000</double>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_numeric_operations">
+          <property name="title">
+           <string>数值操作</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_numeric_ops">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButton_add">
+             <property name="text">
+              <string>加法</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="pushButton_subtract">
+             <property name="text">
+              <string>减法</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="pushButton_multiply">
+             <property name="text">
+              <string>乘法</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QPushButton" name="pushButton_divide">
+             <property name="text">
+              <string>除法</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="pushButton_to_hex">
+             <property name="text">
+              <string>转十六进制</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="pushButton_to_binary">
+             <property name="text">
+              <string>转二进制</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="pushButton_length_convert">
+             <property name="text">
+              <string>长度换算</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QPushButton" name="pushButton_temp_convert">
+             <property name="text">
+              <string>温度换算</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_numeric_result">
+          <property name="title">
+           <string>计算结果</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_numeric_result">
+           <item>
+            <widget class="QTextEdit" name="textEdit_numeric_result">
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
